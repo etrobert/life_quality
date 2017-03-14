@@ -4,18 +4,9 @@ function update_result(values, result, result_div)
 
 	n = 0;
 	for (var value of values)
-	{
-		if (value.max == "7")
-			n += (value.value - 1) * 3;
-		else if (value.max == "4")
-			n += (value.value - 1) * 6;
-		else if (value.max == "2")
-			n += (value.value - 1) * 18;
-		else
-			console.log("Wrong max");
-	}
-	result_div.hidden = false;
+		n += (value.value - 1) * (18 / (value.max - 1));
 	result.innerHTML = Math.floor(n * 100 / (values.length * 18));
+	result_div.hidden = false;
 }
 
 function main()
