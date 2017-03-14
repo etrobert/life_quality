@@ -18,11 +18,6 @@ function update_result(values, result, result_div)
 	result.innerHTML = Math.floor(n * 100 / (values.length * 18));
 }
 
-function cancel(event)
-{
-	event.preventDefault();
-}
-
 function main()
 {
 	var	submit = document.getElementById("submit");
