@@ -9,6 +9,24 @@ function update_result(values, result, result_div)
 	result_div.hidden = false;
 }
 
+/*
+function update_result(values, result, result_div)
+{
+	var numbs = {};
+	var vals = {};
+
+	for (var value of values)
+	{
+		++numbs[value.scale];
+		vals[value.scale] += value.value;
+	}
+	for (var value of vals)
+	{
+		console.log(value);
+	}
+}
+*/
+
 function main()
 {
 	var	submit = document.getElementById("submit");
