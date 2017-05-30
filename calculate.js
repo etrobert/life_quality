@@ -81,30 +81,25 @@ function update_result(values, result, result_div)
 	result_div.hidden = false;
 }
 
-/*
-function update_result(values, result, result_div)
-{
-	var numbs = {};
-	var vals = {};
-
-	for (var value of values)
-	{
-		++numbs[value.scale];
-		vals[value.scale] += value.value;
-	}
-	for (var value of vals)
-	{
-		console.log(value);
-	}
-}
-*/
-
 function main()
 {
 	var	submit = document.getElementById("submit");
 	var values = document.querySelectorAll(".value");
 	var result = document.getElementById("result");
 	var	result_div = document.getElementById("result_div");
+
+	for (var input of values)
+	{
+		input.addEventListener("change", function(event) {
+			var value = parseInt(this.value, 10);
+			if (isNaN(value))
+				this.value = this.min;
+			if (value > parseInt(this.max, 10))
+				this.value = this.max;
+			else if (value < parseInt(this.min, 10))
+				this.value = this.min;
+		});
+	}
 
 	//submit.addEventListener("click", update_result.bind(null, event, values, result));
 	submit.addEventListener("click", function (event) {
