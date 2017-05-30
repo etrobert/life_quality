@@ -1,4 +1,4 @@
-function update_result(values, result, result_div)
+/*function update_result(values, result, result_div)
 {
 	var n;
 
@@ -6,6 +6,73 @@ function update_result(values, result, result_div)
 	for (var value of values)
 		n += (value.value - 1) * (18 / (value.max - 1));
 	result.innerHTML = Math.floor(n * 100 / (values.length * 18));
+	result_div.hidden = false;
+}*/
+
+function functionning_scale(scale)
+{
+	return (scale == "PF2" ||
+		scale == "RF2" ||
+			scale == "EF" ||
+			scale == "CF" ||
+			scale == "SF");
+}
+
+function ignore_scale(scale)
+{
+	return (scale == "FI" ||
+		scale == "QL2");
+}
+
+function parse_values(values)
+{
+	var lists = new Map();
+
+	for (var value of values)
+	{
+		cur_scale = value.getAttribute("scale");
+		if (ignore_scale(cur_scale))
+			break;
+		if (lists.get(cur_scale) == undefined)
+			lists.set(cur_scale, []);
+		if (functionning_scale(cur_scale))
+			lists.get(cur_scale).push(((value.max - 1) - (value.value - 1))
+					* 100 / (value.max - 1));
+		else
+			lists.get(cur_scale).push((value.value - 1)
+					* 100 / (value.max - 1));
+	}
+	return (lists);
+}
+
+function average(list)
+{
+	var n = 0;
+
+	for (var k of list)
+		n += k;
+	return (n / list.length);
+}
+
+function calculate(lists)
+{
+	var n = 0;
+
+	for (var [key, value] of lists)
+	{
+		k = average(value);
+		n += k;
+		console.log("Scale " + key + " has a score of " + k);
+	}
+	return (n / lists.size);
+}
+
+function update_result(values, result, result_div)
+{
+	var lists = parse_values(values);
+	var n = calculate(lists);
+
+	result.innerHTML = Math.floor(n);
 	result_div.hidden = false;
 }
 
