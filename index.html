@@ -6,74 +6,136 @@
 		<script type="text/javascript" src="calculate.js" async></script>
 		<link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous">
 		<style>
-label {width:85%; height: 30px; display:inline-block;}
+label {width:50%; height: 30px; display:inline-block;}
 input {display: inline-block;}
 		</style>
 	</head>
 	<body>
 		<h1>Qualite de vie</h1>
 		<form>
+			<ol>
+				<li>
 			<label for="field_1">Avez-vous des difficultés à faire certains efforts physiques pénibles comme porter un sac à provisions chargé ou une valise ? (1-4) :</label>
-			<input type="number" class="value" id="field_1" scale="PF2" min="1" max="4" value="1" /><br />
+			<input type="number" class="value" id="field_1" scale="PF2" min="1" max="4" /><br />
+				</li>
+				<li>
 			<label for="field_2">Avez-vous des difficultés à faire une <U>longue</U> promenade ? (1-4) :</label>
-			<input type="number" class="value" id="field_2" scale="PF2" min="1" max="4" value="1" /><br />
+			<input type="number" class="value" id="field_2" scale="PF2" min="1" max="4" /><br />
+				</li>
+				<li>
 			<label for="field_3">Avez-vous des difficultés à faire un <U>petit</U> tour dehors ? (1-4) :</label>
-			<input type="number" class="value" id="field_3" scale="PF2" min="1" max="4" value="1" /><br />
+			<input type="number" class="value" id="field_3" scale="PF2" min="1" max="4" /><br />
+				</li>
+				<li>
 			<label for="field_4">Êtes-vous obligé(e) de rester au lit ou dans un fauteuil pendant la journée ? (1-4) :</label>
-			<input type="number" class="value" id="field_4" scale="PF2" min="1" max="4" value="1" /><br />
+			<input type="number" class="value" id="field_4" scale="PF2" min="1" max="4" /><br />
+				</li>
+				<li>
 			<label for="field_5">Avez-vous besoin d'aide pour manger, vous habiller, faire votre toilette ou aller aux toilettes ? (1-4) :</label>
-			<input type="number" class="value" id="field_5" scale="PF2" min="1" max="4" value="1" /><br />
+			<input type="number" class="value" id="field_5" scale="PF2" min="1" max="4" /><br />
+				</li>
 			<h2>Au cours de la semaine passée :</h2>
+				<li>
 			<label for="field_6">Avez-vous été gêné(e) pour faire votre travail ou vos activités de tous les jours? (1-4) :</label>
-			<input type="number" class="value" id="field_6" scale="RF2" min="1" max="4" value="1" /><br />
+			<input type="number" class="value" id="field_6" scale="RF2" min="1" max="4" /><br />
+				</li>
+				<li>
 			<label for="field_7">Avez-vous été gêné(e) dans vos activités de loisirs ? (1-4) :</label>
-			<input type="number" class="value" id="field_7" scale="RF2" min="1" max="4" value="1" /><br />
+			<input type="number" class="value" id="field_7" scale="RF2" min="1" max="4" /><br />
+				</li>
+				<li>
 			<label for="field_8">Avez-vous eu le souffle court ? (1-4) :</label>
-			<input type="number" class="value" id="field_8" scale="DY" min="1" max="4" value="1" /><br />
+			<input type="number" class="value" id="field_8" scale="DY" min="1" max="4" /><br />
+				</li>
+				<li>
 			<label for="field_9">Avez-vous ressenti de la douleur ? (1-4) :</label>
-			<input type="number" class="value" id="field_9" scale="PA" min="1" max="4" value="1" /><br />
+			<input type="number" class="value" id="field_9" scale="PA" min="1" max="4" /><br />
+				</li>
+				<li>
 			<label for="field_10">Avez-vous eu besoin de repos ? (1-4) :</label>
-			<input type="number" class="value" id="field_10" scale="FA" min="1" max="4" value="1" /><br />
+			<input type="number" class="value" id="field_10" scale="FA" min="1" max="4" /><br />
+				</li>
+				<li>
 			<label for="field_11">Avez-vous eu des difficultés à dormir ? (1-4) :</label>
-			<input type="number" class="value" id="field_11" scale="SL" min="1" max="4" value="1" /><br />
+			<input type="number" class="value" id="field_11" scale="SL" min="1" max="4" /><br />
+				</li>
+				<li>
 			<label for="field_12">Vous êtes-vous senti(e) faible ? (1-4) :</label>
-			<input type="number" class="value" id="field_12" scale="FA" min="1" max="4" value="1" /><br />
+			<input type="number" class="value" id="field_12" scale="FA" min="1" max="4" /><br />
+				</li>
+				<li>
 			<label for="field_13">Avez-vous manqué d'appétit ? (1-4) :</label>
-			<input type="number" class="value" id="field_13" scale="AP" min="1" max="4" value="1" /><br />
+			<input type="number" class="value" id="field_13" scale="AP" min="1" max="4" /><br />
+				</li>
+				<li>
 			<label for="field_14">Avez-vous eu des nausées (mal au cœur) ? (1-4) :</label>
-			<input type="number" class="value" id="field_14" scale="NV" min="1" max="4" value="1" /><br />
+			<input type="number" class="value" id="field_14" scale="NV" min="1" max="4" /><br />
+				</li>
+				<li>
 			<label for="field_15">Avez-vous vomi ? (1-4) :</label>
-			<input type="number" class="value" id="field_15" scale="NV" min="1" max="4" value="1" /><br />
+			<input type="number" class="value" id="field_15" scale="NV" min="1" max="4" /><br />
+				</li>
+				<li>
 			<label for="field_16">Avez-vous été constipé(e) ? (1-4) :</label>
-			<input type="number" class="value" id="field_16" scale="CO" min="1" max="4" value="1" /><br />
+			<input type="number" class="value" id="field_16" scale="CO" min="1" max="4" /><br />
+				</li>
+				<li>
 			<label for="field_17">Avez-vous eu de la diarrhée ? (1-4) :</label>
-			<input type="number" class="value" id="field_17" scale="DI" min="1" max="4" value="1" /><br />
+			<input type="number" class="value" id="field_17" scale="DI" min="1" max="4" /><br />
+				</li>
+				<li>
 			<label for="field_18">Étiez-vous fatigué(e) ? (1-4) :</label>
-			<input type="number" class="value" id="field_18" scale="FA" min="1" max="4" value="1" /><br />
+			<input type="number" class="value" id="field_18" scale="FA" min="1" max="4" /><br />
+				</li>
+				<li>
 			<label for="field_19">Des douleurs ont-elles perturbé vos activités quotidiennes ? (1-4) :</label>
-			<input type="number" class="value" id="field_19" scale="PA" min="1" max="4" value="1" /><br />
+			<input type="number" class="value" id="field_19" scale="PA" min="1" max="4" /><br />
+				</li>
+				<li>
 			<label for="field_20">Avez-vous eu des difficultés à vous concentrer sur certaines choses, par exemple, pour lire le journal ou regarder la télévision ? (1-4) :</label>
-			<input type="number" class="value" id="field_20" scale="CF" min="1" max="4" value="1" /><br />
+			<input type="number" class="value" id="field_20" scale="CF" min="1" max="4" /><br />
+				</li>
+				<li>
 			<label for="field_21">Vous êtes-vous senti(e) tendu(e) ? (1-4) :</label>
-			<input type="number" class="value" id="field_21" scale="EF" min="1" max="4" value="1" /><br />
+			<input type="number" class="value" id="field_21" scale="EF" min="1" max="4" /><br />
+				</li>
+				<li>
 			<label for="field_22">Vous êtes-vous fait du soucis ? (1-4) :</label>
-			<input type="number" class="value" id="field_22" scale="EF" min="1" max="4" value="1" /><br />
+			<input type="number" class="value" id="field_22" scale="EF" min="1" max="4" /><br />
+				</li>
+				<li>
 			<label for="field_23">Vous êtes-vous senti(e) irritable ? (1-4) :</label>
-			<input type="number" class="value" id="field_23" scale="EF" min="1" max="4" value="1" /><br />
+			<input type="number" class="value" id="field_23" scale="EF" min="1" max="4" /><br />
+				</li>
+				<li>
 			<label for="field_24">Vous êtes-vous senti(e) déprimé(e) ? (1-4) :</label>
-			<input type="number" class="value" id="field_24" scale="EF" min="1" max="4" value="1" /><br />
+			<input type="number" class="value" id="field_24" scale="EF" min="1" max="4" /><br />
+				</li>
+				<li>
 			<label for="field_25">Avez-vous eu des difficultés à vous souvenir de certaines choses ? (1-4) :</label>
-			<input type="number" class="value" id="field_25" scale="CF" min="1" max="4" value="1" /><br />
+			<input type="number" class="value" id="field_25" scale="CF" min="1" max="4" /><br />
+				</li>
+				<li>
 			<label for="field_26">Votre état physique ou votre traitement médical vous ont-ils gêné(e) dans votre vie <U>familiale</U> ? (1-4) :</label>
-			<input type="number" class="value" id="field_26" scale="SF" min="1" max="4" value="1" /><br />
+			<input type="number" class="value" id="field_26" scale="SF" min="1" max="4" /><br />
+				</li>
+				<li>
 			<label for="field_27">Votre état physique ou votre traitement médical vous ont-ils gêné(e) dans vos activités <U>sociales</U> (par exemple, sortir avec des amis, aller au cinéma...) ? (1-4) :</label>
-			<input type="number" class="value" id="field_27" scale="SF" min="1" max="4" value="1" /><br />
+			<input type="number" class="value" id="field_27" scale="SF" min="1" max="4" /><br />
+				</li>
+				<li>
 			<label for="field_28">Votre état physique ou votre traitement médical vous ont-ils causé des problèmes financiers ? (1-4) :</label>
-			<input type="number" class="value" id="field_28" scale="FI" min="1" max="4" value="1" /><br />
+			<input type="number" class="value" id="field_28" scale="FI" min="1" max="4" /><br />
+				</li>
+				<li>
 			<label for="field_29">Comment évalueriez-vous votre <U>état de santé</U> au cours de la semaine passé? (1-7) :</label>
-			<input type="number" class="value" id="field_29" scale="QL2" min="1" max="7" value="1" /><br />
+			<input type="number" class="value" id="field_29" scale="QL2" min="1" max="7" /><br />
+				</li>
+				<li>
 			<label for="field_30">Comment évalueriez-vous l'ensemble de votre <U>qualité de vie</U> au cours de la semaine passée ? (1-7) :</label>
-			<input type="number" class="value" id="field_30" scale="QL2" min="1" max="7" value="1" /><br />
+			<input type="number" class="value" id="field_30" scale="QL2" min="1" max="7" /><br />
+				</li>
+			</ol>
 			<input type="submit" id="submit" value="Calculer" />
 		</form>
 		<div id="result_div" hidden="true">

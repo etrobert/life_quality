@@ -69,6 +69,11 @@ function calculate(lists)
 
 function update_result(values, result, result_div)
 {
+	for (var input of values)
+	{
+		if (input.value == "")
+			return ;
+	}
 	var lists = parse_values(values);
 	var n = calculate(lists);
 
