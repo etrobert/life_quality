@@ -63,6 +63,10 @@ function calculate(lists)
 		k = average(value);
 		n += k;
 		console.log("Scale " + key + " has a score of " + k);
+		if (functionning_scale(key))
+			n += k;
+		else
+			n += 100 - k;
 	}
 	return (n / lists.size);
 }
